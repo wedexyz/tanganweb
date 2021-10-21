@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS - Play with my Hand.</title>
+  <link rel="stylesheet" href="/jsfix/cdn.min.css">
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <title>Paper, Rock, Scissor</title>
+  </head>
+  <body>
+    <div id="navigation-bar" class="navigation-bar">
+      <span class="close-bar" onclick="navigationBar()">❌</span>
+      <div class="select-form">
+        <h1>Play with me</h1>
+        <div class="select">
+					<select id="select_f1" class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="none">Normal</option>
+						<option value="tight">Tight</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Thumb (First Finger)</label>
+				</div>
+        <div class="select">
+					<select id="select_f2" class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="none">Normal</option>
+						<option value="tight">Tight</option>
+						<option value="move-left">Left</option>
+						<option value="move-right">Right</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Index (Second Finger)</label>
+				</div>
+        <div class="select">
+					<select id="select_f3" class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="none">Normal</option>
+						<option value="tight">Tight</option>
+						<option value="move-left">Left</option>
+						<option value="move-right">Right</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Middle (Third Finger)</label>
+				</div>
+        <div class="select">
+					<select id="select_f4" class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="none">Normal</option>
+						<option value="tight">Tight</option>
+						<option value="move-left">Left</option>
+						<option value="move-right">Right</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Ring (Fourth Finger)</label>
+				</div>
+        <div class="select">
+					<select id="select_f5" class="select-text" required>
+						<option value="" disabled selected></option>
+						<option value="none">Normal</option>
+						<option value="tight">Tight</option>
+						<option value="move-left">Left</option>
+						<option value="move-right">Right</option>
+					</select>
+					<span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Little (Fifth Finger)</label>
+				</div>
+        <div class="button" onclick="hand_custom()"><span>Let's Go</span></div>
+      </div>
+    </div>
+    <div class="round-line"></div>
+    <div class="round-wrapper">
+      <div class="button" id="b_1" onclick="hand_cross()"><span>Cross</span></div>
+      <div class="button" id="b_2" onclick="hand_scissor()"><span>Scissor</span></div>
+      <div class="button" id="b_3" onclick="hand_rock()"><span>Rock</span></div>
+      <div class="button" id="b_4" onclick="hand_paper()"><span>Paper</span></div>
+      <div class="button" id="b_5" onclick="hand_spock()"><span>Spock</span></div>
+      <div class="button" id="b_6" onclick="navigationBar()"><span>Custom</span></div>
+      <div class="button" id="b_7" onclick="hand_gun()"><span>Gun</span></div>
+      <div class="button" id="b_8" onclick="hand_metal()"><span>H.Metal</span></div>
+      <div class="wrapper">
+        <div class="hand">
+          <div class="finger finger-1" id="f_1">
+            <div class="proximal">
+              <div class="phalanx-1">
+                <div class="middle">
+                  <div class="phalanx-2">
+                    <div class="distal"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="finger finger-2" id="f_2">
+            <div class="proximal">
+              <div class="phalanx-1">
+                <div class="middle">
+                  <div class="phalanx-2">
+                    <div class="distal"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="finger finger-3" id="f_3">
+            <div class="proximal">
+              <div class="phalanx-1">
+                <div class="middle">
+                  <div class="phalanx-2">
+                    <div class="distal"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="finger finger-4" id="f_4">
+            <div class="proximal">
+              <div class="phalanx-1">
+                <div class="middle">
+                  <div class="phalanx-2">
+                    <div class="distal"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="finger finger-5" id="f_5">
+            <div class="proximal">
+              <div class="phalanx-1">
+                <div class="middle">
+                  <div class="phalanx-2">
+                    <div class="distal"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script src="jsfix/firebase.js"></script>
+  <script  src="jsfix/script.js"></script>
+ 
+  <script>
+var config= {
+  apiKey: "AIzaSyBYVwVZUBLXSm7iR5Fp6k-dziJGEuhwExk",
+  authDomain: "megaboth007.firebaseapp.com",
+  databaseURL: "https://megaboth007.firebaseio.com",
+  projectId: "megaboth007",
+  storageBucket: "megaboth007.appspot.com",
+  messagingSenderId: "942424390212",
+  appId: "1:942424390212:web:c3622743b0fba57b5a1a11"
+  
+};
+firebase.initializeApp(config);
+var dbRef = firebase.database();
+var baca_jarak = document.getElementById('jarak');
+dbRef.ref("/suara").on('value', snap => baca_jarak.innerHTML= snap.val());
+
+
+//melakukan call back pada node firebase      
+var db = firebase.database();
+var ref = db.ref("/suara");
+
+ref.on("value", function(snapshot) {
+if (snapshot.val()==0){
+  hand_paper()
+}
+else if (snapshot.val()==1){
+  hand_spock()
+  
+}
+else if (snapshot.val()==2){
+  hand_metal()
+  
+}
+else if (snapshot.val()==3){
+  hand_gun()
+  
+}
+else if (snapshot.val()==4){
+  hand_cross()
+  
+   
+}
+else if (snapshot.val()==5){
+  hand_scissor()
+}
+
+
+})
+
+
+  </script>
+
+</body>
+</html>
