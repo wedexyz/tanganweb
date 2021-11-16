@@ -25,6 +25,20 @@ function hand_pointer() {
   hand_change(hand);
 }
 
+function menjimpit() {
+  var hand = ['tight', 'tight', 'tight', 'normal', 'normal'];
+  hand_change(hand);
+}
+function menggengam() {
+  var hand = ['tight', 'tight', 'tight', 'tight', 'tight'];
+  hand_change(hand);
+}
+
+function santai() {
+  var hand = ['normal', 'normal', 'normal', 'normal', 'normal'];
+  hand_change(hand);
+}
+
 function hand_rock() {
   var hand = ['tight', 'tight', 'tight', 'tight', 'tight'];
   hand_change(hand);
