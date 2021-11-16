@@ -178,14 +178,14 @@ var ref = db.ref("/suara");
 
 ref.on("value", function(snapshot) {
 if (snapshot.val()==0){
-  hand_paper()
+ santai()
 }
 else if (snapshot.val()==1){
-  hand_spock()
+  menggengam()
   
 }
 else if (snapshot.val()==2){
-  hand_metal()
+  menjimpit()
   
 }
 else if (snapshot.val()==3){
