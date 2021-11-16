@@ -26,7 +26,7 @@ function hand_pointer() {
 }
 
 function menjimpit() {
-  var hand = ['tight', 'tight', 'tight', 'normal', 'normal'];
+  var hand = ['tight', 'tight', 'tight', 'none', 'none'];
   hand_change(hand);
 }
 function menggengam() {
@@ -35,7 +35,7 @@ function menggengam() {
 }
 
 function santai() {
-  var hand = ['normal', 'normal', 'normal', 'normal', 'normal'];
+  var hand = ['none', 'none', 'none', 'none', 'none'];
   hand_change(hand);
 }
 
